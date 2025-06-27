@@ -1,0 +1,75 @@
+.navBar {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+.topBar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0.9rem;
+    font-size: 0.87rem;
+    
+}
+.contact-left,
+.contact-right {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.amber-icon {
+    color: #d97706; 
+}
+.topBar-divider {
+    border: 0 auto;
+    align-self: center;
+    border-bottom: 1px solid #fcd34d; 
+    width: 99%;
+}
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 0; */
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo {
+    height: 60px;
+    width: 60px;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+.brand-name {
+    color: #d97706;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.brand-tagline {
+    font-size: 0.8rem;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    padding-right: 0.9rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+.nav-links a:hover {
+    color: #d97706;
+}
