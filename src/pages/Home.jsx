@@ -3,6 +3,9 @@ import './Home.css';
 import { MapPin, Plane, Users, Star, User } from 'lucide-react';
 import ServiceCard from '../components/Services/Services';
 import { services } from '../components/Services/servicesData';
+import PackageCards from '../components/Packages/PackageCards';
+import ContactSection from '../components/Contact/ContactSection';
+import Footer from '../components/Footer/Footer';
 
 function Home() {
   return (
@@ -84,21 +87,29 @@ function Home() {
             ))}
           </div>
 
-          <div>
-            <p>Ready to Experience Authentic Africa?</p>
-            <p>Let our local experts craft a personalized journey that connects you with the heart</p>
-            <p>and soul of Kenya's wilderness and culture.</p>
-            <p>Start Planning Your Adventure</p>
+          <div className='services-ready'>
+            <h3>Ready to Experience Authentic Africa?</h3>
+            <p>Let our local experts craft a personalized journey that connects you with the heart and soul of Kenya's wilderness and culture.</p>
+            <button className='cta-button'>
+              Start Planning Your Adventure
+            </button>
           </div>
         </section>
+        
         <section className='packages'>
-          <h1>Featured Safari Packages</h1>
+          <h2>Featured Safari Packages</h2>
+          <span className='packages-span'>Carefully curated safari experiences showcasing Kenya's most spectacular wildlife destinations</span>
+          <div className="container">
+          <PackageCards />
+          </div>
+          <button className='explore-packages-btn'>View all Safari Packages</button>
         </section>
+
         <section className='contact'>
-          <h1>Get in touch</h1>
+          <ContactSection/>
         </section>
         <section className='company-info'>
-          <h1>Footer</h1>
+          <Footer/>
         </section>
       </main>
     </>
