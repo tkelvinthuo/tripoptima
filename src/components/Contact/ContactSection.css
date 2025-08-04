@@ -143,7 +143,7 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  /* gap: 0rem; */
+  gap: 0;
 }
 
 .info-section {
@@ -238,16 +238,26 @@
   border-radius: 0.5rem;
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
 .info-note h4 {
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-size: 1.125rem;
   color: white;
+  display: block;
+  width: 100%;
 }
 
-.info-note ul {
+.info-note .heading-icon {
+  color: #fbbf24;
+  margin-right: 0.5rem;
+  font-size: 1.2em;
+}
+
+.info-note .info-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -256,10 +266,30 @@
   gap: 0.5rem;
 }
 
-.info-note li {
+.info-note .info-list li {
   color: #d1d5db;
   font-size: 0.875rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0;
+  border-radius: 0.25rem;
+}
+
+.info-note .info-list li:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
+  color: #f3f4f6;
+}
+
+.info-note .list-icon {
+  color: #059669;
+  font-weight: bold;
+  margin-right: 0.75rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  font-size: 0.9em;
 }
 
 /* Responsive Adjustments */

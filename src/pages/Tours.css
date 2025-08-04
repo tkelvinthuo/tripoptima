@@ -1,0 +1,656 @@
+/* Tours Container */
+.tours-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, 
+    rgba(20, 83, 45, 0.7), 
+    rgba(180, 83, 9, 0.7));
+  z-index: 10;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    height: 50vh;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+  }
+}
+
+/* Introduction Section */
+.introduction-section {
+  padding: 2rem 0;
+  background-color: white;
+}
+
+.introduction-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.introduction-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.introduction-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.introduction-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #059669;
+  margin-bottom: 0;
+}
+
+.stat-label {
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive Design for Introduction */
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .introduction-title {
+    font-size: 2.5rem;
+  }
+  
+  .introduction-description {
+    font-size: 1.25rem;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .introduction-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .introduction-section {
+    padding: 2rem 0;
+  }
+  
+  .introduction-title {
+    font-size: 2rem;
+  }
+  
+  .introduction-description {
+    font-size: 1rem;
+  }
+  
+  .stats-grid {
+    gap: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+  }
+}
+
+/* Featured Parks Section */
+.featured-parks-section {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, rgba(34, 197, 94, 0.05), rgba(245, 159, 0, 0.05));
+}
+
+.featured-parks-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.parks-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.parks-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.parks-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Parks Grid */
+.parks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.park-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.park-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.park-image-container {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+}
+
+.park-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.park-card:hover .park-image {
+  transform: scale(1.05);
+}
+
+.park-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(to right, #d97706, #ea580c);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.park-content {
+  padding: 1.5rem;
+}
+
+.park-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.park-description-text {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.park-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-item {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #059669;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.highlight-icon {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.explore-btn {
+  width: 100%;
+  background: linear-gradient(to right, #059669, #d97706);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: linear-gradient(to right, #047857, #b45309);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for Parks */
+@media (min-width: 768px) {
+  .parks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .parks-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .parks-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-parks-section {
+    padding: 2rem 0;
+  }
+  
+  .parks-title {
+    font-size: 2rem;
+  }
+  
+  .parks-description {
+    font-size: 1rem;
+  }
+  
+  .park-image-container {
+    height: 12rem;
+  }
+  
+  .park-content {
+    padding: 1rem;
+  }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.testimonials-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  flex-shrink: 0;
+}
+
+.testimonial-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-info {
+  flex-grow: 1;
+}
+
+.testimonial-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+}
+
+.testimonial-country {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-star {
+  color: #f59e0b;
+  fill: currentColor;
+}
+
+.testimonial-content {
+  position: relative;
+}
+
+.testimonial-quote {
+  color: #059669;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-comment {
+  color: #4b5563;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design for Testimonials */
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .testimonials-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-section {
+    padding: 2rem 0;
+  }
+  
+  .testimonials-title {
+    font-size: 2rem;
+  }
+  
+  .testimonials-description {
+    font-size: 1rem;
+  }
+  
+  .testimonial-card {
+    padding: 1rem;
+  }
+  
+  .testimonial-header {
+    gap: 0.75rem;
+  }
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 4rem 0;
+  background: linear-gradient(to right, #059669, #d97706);
+  color: white;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-btn-primary {
+  background: white;
+  color: #059669;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.cta-btn-primary:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.cta-btn-secondary:hover {
+  background: white;
+  color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for CTA */
+@media (min-width: 640px) {
+  .cta-buttons {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .cta-title {
+    font-size: 3rem;
+  }
+  
+  .cta-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta-section {
+    padding: 2rem 0;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+  }
+  
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+}

@@ -106,14 +106,14 @@ function ContactSection() {
             </div>
 
             <div className="info-note">
-              <h4>Why Choose Safari Logistics?</h4>
-              <ul>
-                <li>• 10+ years of experience in African tourism</li>
-                <li>• Licensed and insured operations</li>
-                <li>• Professional multilingual guides</li>
-                <li>• Modern, well-maintained vehicle fleet</li>
-                <li>• 24/7 customer support</li>
-                <li>• Competitive pricing with no hidden fees</li>
+              <h4><span className="heading-icon">🏆</span> Why Choose Safari Logistics?</h4>
+              <ul className="info-list">
+                <li><span className="list-icon">✓</span> 10+ years of experience in African tourism</li>
+                <li><span className="list-icon">✓</span> Licensed and insured operations</li>
+                <li><span className="list-icon">✓</span> Professional multilingual guides</li>
+                <li><span className="list-icon">✓</span> Modern, well-maintained vehicle fleet</li>
+                <li><span className="list-icon">✓</span> 24/7 customer support</li>
+                <li><span className="list-icon">✓</span> Competitive pricing with no hidden fees</li>
               </ul>
             </div>
           </div>
