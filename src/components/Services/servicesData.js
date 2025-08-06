@@ -14,7 +14,7 @@ export const services = [
     ],
     image:
       "https://images.unsplash.com/photo-1547970810-dc1eac37d174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    link: "/tours-safaris"
+    link: "/tours"
   },
   {
     icon: Plane,
@@ -29,7 +29,7 @@ export const services = [
     ],
     image:
       "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    link: "/airport-transfers"
+    link: "/airport"
   },
   {
     icon: Users,
@@ -44,7 +44,7 @@ export const services = [
     ],
     image:
       "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    link: "/chauffeur-services"
+    link: "/chauffeur"
   },
   {
     icon: Car,
@@ -59,6 +59,6 @@ export const services = [
     ],
     image:
       "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    link: "/car-hire"
+    link: "/carhire"
   }
 ];

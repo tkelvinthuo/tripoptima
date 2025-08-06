@@ -6,63 +6,122 @@ import { services } from '../components/Services/servicesData';
 import PackageCards from '../components/Packages/PackageCards';
 import ContactSection from '../components/Contact/ContactSection';
 import Footer from '../components/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+
+  // Smooth scroll to packages section for "Start Your Safari"
+  const scrollToPackages = () => {
+    const packagesSection = document.querySelector('.packages');
+    const navbar = document.querySelector('.navBar');
+    
+    if (packagesSection && navbar) {
+      const navbarHeight = navbar.offsetHeight;
+      const targetPosition = packagesSection.offsetTop - navbarHeight - 20; 
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Smooth scroll to services section for "Explore Services"
+  const scrollToServices = () => {
+    const servicesSection = document.querySelector('.comprehensive');
+    const navbar = document.querySelector('.navBar');
+    
+    if (servicesSection && navbar) {
+      const navbarHeight = navbar.offsetHeight;
+      const targetPosition = servicesSection.offsetTop - navbarHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <>
       <Navbar />
       <main className='home-container'>
         <section className='journey'>
-          <div className='journey-content'>
-            <div className='highlighted-message'>
-              <MapPin className='icon' size={16} />
-              <span className='message'>Discover East Africa's Hidden Treasures</span>
-            </div>
-            <div className='welcome-message'>
-              <h1 className='part-a'>Journey Into</h1>
-              <h1 className='part-b'>Wild Africa</h1>
-            </div>
-            <div className='main-message'>
-              <p>From the thundering hooves of the Great Migration to the snow-capped peaks of</p>
-              <p>Mount Kilimanjaro, experience Africa's raw beauty through our premium logistics</p>
-              <p>and safari services.</p>
-              <p className='last-part'>Where every journey tells an ancient story.</p>
-            </div>
-            <div className='options-buttons'>
-              <div className='options-start'>
-                <MapPin className='options-icon' size={16} />
-                <span className='start'>Start Your Safari</span>
-              </div>
-              <div className='options-explore'>
-                <Plane className="mr-2" size={20} />
-                <span className='explore'>Explore Services</span>
-              </div>
-            </div>
-            <div className='stats-cards'>
-              <div className='stats-card'>
-                <div className='stats-icon'>
-                  <MapPin className='icon' size={28} />
-                </div>
+          {/* Floating Elements */}
+          <div className='floating-elements'>
+            <div className='floating-dot floating-dot-1'></div>
+            <div className='floating-dot floating-dot-2'></div>
+            <div className='floating-dot floating-dot-3'></div>
+          </div>
 
-                <p className='stats-number'>15+</p>
-                <p className='stats-title'>National Parks and Reserves</p>
-                <p className='stats-subtext'>Including Maasai Mara and Amboseli</p>
+          {/* Content */}
+          <div className='journey-content'>
+            <div className='journey-container'>
+              {/* Subtitle */}
+              <div className='highlighted-message'>
+                <MapPin className='icon' size={16} />
+                <span className='message'>Discover East Africa's Hidden Treasures</span>
               </div>
-              <div className='stats-card'>
-                <div className='stats-icon'>
-                  <Users className='icon' size={28} />
-                </div>
-                <p className='stats-number'>2000+</p>
-                <p className='stats-title'>Happy Adventurers</p>
-                <p className='stats-subtext'>From 30+ countries worldwide</p>
+
+              {/* Main Heading */}
+              <div className='welcome-message'>
+                <h1 className='part-a'>Journey Into</h1>
+                <h1 className='part-b'>Wild Africa</h1>
               </div>
-              <div className='stats-card'>
-                <div className='stats-icon'>
-                  <Star className='icon' size={28} />
+              
+              {/* Description */}
+              <div className='main-message'>
+                <p>From the thundering hooves of the Great Migration to the snow-capped peaks of Mount Kilimanjaro, experience Africa's raw beauty through our premium logistics and safari services.</p>
+                <span className='last-part'>Where every journey tells an ancient story.</span>
+              </div>
+
+              {/* Action Buttons */}
+              <div className='options-buttons'>
+                <button className='options-start' onClick={scrollToPackages}>
+                  <MapPin className='options-icon' size={20} />
+                  <span className='start'>Start Your Safari</span>
+                </button>
+                <button className='options-explore' onClick={scrollToServices}>
+                  <Plane className="explore-icon" size={20} />
+                  <span className='explore'>Explore Services</span>
+                </button>
+              </div>
+
+              {/* Enhanced Stats */}
+              <div className='stats-cards'>
+                <div className='stats-card'>
+                  <div className='stats-icon'>
+                    <MapPin className='icon' size={28} />
+                  </div>
+                  <div className='stats-number'>15+</div>
+                  <div className='stats-title'>National Parks & Reserves</div>
+                  <div className='stats-subtext'>Including Maasai Mara & Amboseli</div>
                 </div>
-                <p className='stats-number'>4.8</p>
-                <p className='stats-title'>Excellence Rating</p>
-                <p className='stats-subtext'>Based on 1000+ reviews</p>
+                <div className='stats-card'>
+                  <div className='stats-icon'>
+                    <Users className='icon' size={28} />
+                  </div>
+                  <div className='stats-number'>1,000+</div>
+                  <div className='stats-title'>Happy Adventurers</div>
+                  <div className='stats-subtext'>From 50+ countries worldwide</div>
+                </div>
+                <div className='stats-card'>
+                  <div className='stats-icon'>
+                    <Star className='icon' size={28} />
+                  </div>
+                  <div className='stats-number'>4.9</div>
+                  <div className='stats-title'>Excellence Rating</div>
+                  <div className='stats-subtext'>Based on 400+ reviews</div>
+                </div>
+              </div>
+
+              {/* African Quote */}
+              <div className='african-quote'>
+                <blockquote className='quote-text'>
+                  "In Africa, you have space. There are huge empty places. It's a profound silence."
+                  <footer className='quote-footer'>- African Proverb</footer>
+                </blockquote>
               </div>
             </div>
           </div>

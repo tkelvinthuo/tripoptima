@@ -1,228 +1,114 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Users, Clock, Shield, Star, Quote, MapPin } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { MapPin, Star, Users, Plane } from "lucide-react";
 
-const ChauffeurServices = () => {
-  const services = [
-    {
-      title: "Executive Business Travel",
-      description: "Professional chauffeur services for business meetings and corporate events",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      features: ["Executive vehicles", "Professional attire", "Punctual service", "Confidentiality"]
-    },
-    {
-      title: "City Tours & Sightseeing",
-      description: "Personalized guided tours of Nairobi and other major Kenyan cities",
-      image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      features: ["Local expertise", "Cultural insights", "Flexible itineraries", "Photo opportunities"]
-    },
-    {
-      title: "Special Events & Occasions",
-      description: "Luxury transportation for weddings, celebrations, and special occasions",
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      features: ["Luxury fleet", "Special decorations", "Professional service", "Memorable experiences"]
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Wilson",
-      company: "Tech Solutions Ltd",
-      rating: 5,
-      comment: "Outstanding service for our business delegation. The chauffeur was professional, punctual, and knew all the best routes. Made our Nairobi meetings seamless.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-    },
-    {
-      name: "Alexandra Smith",
-      company: "Personal Client",
-      rating: 5,
-      comment: "Perfect city tour experience! Our chauffeur guide shared fascinating stories about Nairobi's history and culture. Felt like traveling with a knowledgeable friend.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-    }
-  ];
-
+const Hero = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-amber-50">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 to-amber-900/80 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80')"
-          }}
-        ></div>
-        
-        <div className="relative z-20 container mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-            Premium Chauffeur Services
+    <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-900/90 to-orange-900/90 z-10"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1466721591366-2d5fba72006d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80')"
+        }}
+      ></div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 z-15">
+        <div className="absolute top-20 left-10 animate-pulse">
+          <div className="w-3 h-3 bg-amber-400 rounded-full opacity-70"></div>
+        </div>
+        <div className="absolute top-40 right-20 animate-pulse delay-1000">
+          <div className="w-2 h-2 bg-orange-400 rounded-full opacity-60"></div>
+        </div>
+        <div className="absolute bottom-32 left-16 animate-pulse delay-2000">
+          <div className="w-4 h-4 bg-amber-300 rounded-full opacity-50"></div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-20 container mx-auto px-4 text-center text-white">
+        <div className="max-w-5xl mx-auto">
+          {/* Subtitle */}
+          <div className="inline-flex items-center bg-amber-600/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-amber-400/30">
+            <MapPin className="mr-2 text-amber-400" size={16} />
+            <span className="text-amber-200 text-sm font-medium">Discover East Africa's Hidden Treasures</span>
+          </div>
+
+          <h1 className="text-6xl lg:text-8xl font-bold mb-8 animate-fade-in">
+            <span className="block text-white">Journey Into</span>
+            <span className="block bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+              Wild Africa
+            </span>
           </h1>
-          <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
-            Experience Kenya in style with our professional chauffeur services, 
-            combining luxury, local expertise, and personalized attention.
+          
+          <p className="text-xl lg:text-2xl mb-10 text-amber-100 leading-relaxed max-w-4xl mx-auto">
+            From the thundering hooves of the Great Migration to the snow-capped peaks of Mount Kilimanjaro, 
+            experience Africa's raw beauty through our premium logistics and safari services. 
+            <span className="block mt-2 font-semibold text-amber-200">
+              Where every journey tells an ancient story.
+            </span>
           </p>
-        </div>
-      </section>
 
-      {/* Service Overview */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">
-              Luxury Travel Redefined
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Our chauffeur services go beyond simple transportation. We provide a premium travel 
-              experience with professional drivers who double as local ambassadors, sharing insights 
-              about Kenya's rich culture, history, and hidden gems.
-            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white text-lg px-10 py-7 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 border border-amber-400/30"
+            >
+              <MapPin className="mr-2" size={20} />
+              Start Your Safari
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-amber-400 text-amber-100 hover:bg-amber-400 hover:text-amber-900 text-lg px-10 py-7 rounded-full backdrop-blur-sm bg-amber-600/10 transition-all duration-300"
+            >
+              <Plane className="mr-2" size={20} />
+              Explore Services
+            </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <Users className="mx-auto text-purple-600 mb-4" size={48} />
-                <CardTitle>Professional Chauffeurs</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">Experienced, licensed, and trained professionals with local expertise</p>
-              </CardContent>
-            </Card>
+          {/* Enhanced Stats with African Theme */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+            <div className="flex flex-col items-center p-8 backdrop-blur-sm bg-gradient-to-b from-amber-600/20 to-orange-600/20 rounded-2xl border border-amber-400/20 hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                <MapPin className="text-white" size={28} />
+              </div>
+              <div className="text-4xl font-bold mb-2 text-amber-200">15+</div>
+              <div className="text-amber-100 font-medium">National Parks & Reserves</div>
+              <div className="text-amber-300 text-sm mt-1">Including Maasai Mara & Amboseli</div>
+            </div>
+            
+            <div className="flex flex-col items-center p-8 backdrop-blur-sm bg-gradient-to-b from-amber-600/20 to-orange-600/20 rounded-2xl border border-amber-400/20 hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                <Users className="text-white" size={28} />
+              </div>
+              <div className="text-4xl font-bold mb-2 text-amber-200">8,000+</div>
+              <div className="text-amber-100 font-medium">Happy Adventurers</div>
+              <div className="text-amber-300 text-sm mt-1">From 50+ countries worldwide</div>
+            </div>
+            
+            <div className="flex flex-col items-center p-8 backdrop-blur-sm bg-gradient-to-b from-amber-600/20 to-orange-600/20 rounded-2xl border border-amber-400/20 hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                <Star className="text-white" size={28} />
+              </div>
+              <div className="text-4xl font-bold mb-2 text-amber-200">4.9</div>
+              <div className="text-amber-100 font-medium">Excellence Rating</div>
+              <div className="text-amber-300 text-sm mt-1">Based on 2,000+ reviews</div>
+            </div>
+          </div>
 
-            <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <Shield className="mx-auto text-green-600 mb-4" size={48} />
-                <CardTitle>Executive Fleet</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">Luxury vehicles maintained to the highest standards for your comfort</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <Clock className="mx-auto text-amber-600 mb-4" size={48} />
-                <CardTitle>Flexible Scheduling</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">Adaptable to your itinerary with real-time schedule adjustments</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <MapPin className="mx-auto text-blue-600 mb-4" size={48} />
-                <CardTitle>Local Knowledge</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">Insider knowledge of routes, attractions, and cultural experiences</p>
-              </CardContent>
-            </Card>
+          {/* African Quote */}
+          <div className="mt-16 max-w-3xl mx-auto">
+            <blockquote className="text-lg italic text-amber-200 border-l-4 border-amber-400 pl-6">
+              "In Africa, you have space. There are huge empty places. It's a profound silence." 
+              <footer className="text-amber-300 mt-2 not-italic">- African Proverb</footer>
+            </blockquote>
           </div>
         </div>
-      </section>
-
-      {/* Service Categories */}
-      <section className="py-16 bg-gradient-to-b from-purple-50 to-amber-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Our Chauffeur Services
-            </h2>
-            <p className="text-xl text-gray-600">
-              Tailored transportation solutions for every occasion
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="relative h-48">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <Badge className="absolute top-4 right-4 bg-purple-600 hover:bg-purple-700">
-                    Premium
-                  </Badge>
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-xl text-gray-800">{service.title}</CardTitle>
-                  <CardDescription className="text-gray-600">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-amber-600 hover:from-purple-700 hover:to-amber-700">
-                    Book Service
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Client Testimonials
-            </h2>
-            <p className="text-xl text-gray-600">
-              Exceptional service experiences from our valued clients
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-lg">
-                <CardHeader>
-                  <div className="flex items-center space-x-4">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div>
-                      <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                      <CardDescription>{testimonial.company}</CardDescription>
-                    </div>
-                  </div>
-                  <div className="flex space-x-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="text-amber-400 fill-current" size={16} />
-                    ))}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <Quote className="text-purple-600 mb-2" size={20} />
-                  <p className="text-gray-600 italic">"{testimonial.comment}"</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+      </div>
+    </section>
   );
 };
 
-export default ChauffeurServices;
+export default Hero;
