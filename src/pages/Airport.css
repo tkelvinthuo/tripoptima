@@ -1,0 +1,434 @@
+/* Airport Transfers Page Styles */
+.airport-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #eff6ff, #f0fdf4);
+}
+
+/* Common Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Icon Styles */
+.icon {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.airport-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.8), rgba(21, 128, 61, 0.8));
+  z-index: 10;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+  .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+/* Service Overview Section */
+.service-overview {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.overview-header {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  line-height: 1.75;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature-card {
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  background: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-header {
+  margin-bottom: 1rem;
+}
+
+.feature-header .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card:nth-child(1) .icon {
+  color: #2563eb;
+}
+
+.feature-card:nth-child(2) .icon {
+  color: #16a34a;
+}
+
+.feature-card:nth-child(3) .icon {
+  color: #d97706;
+}
+
+.feature-card:nth-child(4) .icon {
+  color: #9333ea;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.feature-text {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Transfer Services Section */
+.transfer-services {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, #eff6ff, #f0fdf4);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 35px 60px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.service-image-container {
+  position: relative;
+  height: 12rem;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.service-badge:hover {
+  background-color: #1d4ed8;
+}
+
+.service-header {
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.service-description {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.service-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.service-features {
+  margin-bottom: 1rem;
+}
+
+.service-feature {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.feature-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #2563eb;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.service-button {
+  width: 100%;
+  background: linear-gradient(to right, #2563eb, #16a34a);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.service-button:hover {
+  background: linear-gradient(to right, #1d4ed8, #15803d);
+  transform: translateY(-1px);
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.testimonial-card {
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-header {
+  margin-bottom: 1rem;
+}
+
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.testimonial-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-country {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.testimonial-rating .icon {
+  color: #fbbf24;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.testimonial-content {
+  position: relative;
+}
+
+.testimonial-content .icon {
+  color: #2563eb;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-comment {
+  color: #6b7280;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .airport-hero {
+    height: 50vh;
+  }
+  
+  .service-overview,
+  .transfer-services,
+  .testimonials {
+    padding: 3rem 0;
+  }
+}
