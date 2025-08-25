@@ -243,6 +243,7 @@
 .options-start:focus {
   outline: 2px solid rgba(251, 191, 36, 0.6) !important;
   outline-offset: 2px;
+  border: none;
 }
 
 .options-start:focus-visible {
@@ -257,6 +258,7 @@
 .options-start:hover {
   background: linear-gradient(to right, #b45309, #c2410c);
   transform: scale(1.05);
+  border: none;
 }
 
 .options-explore {
@@ -284,6 +286,7 @@
 .options-explore:focus {
   outline: 2px solid rgba(251, 191, 36, 0.6) !important;
   outline-offset: 2px;
+  border: none;
 }
 
 .options-explore:focus-visible {
@@ -299,6 +302,7 @@
   background-color: #fbbf24;
   color: #78350f;
   transform: scale(1.05);
+  border: none;
 }
 
 .stats-cards {

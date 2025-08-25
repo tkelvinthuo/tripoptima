@@ -6,10 +6,13 @@ import { services } from '../components/Services/servicesData';
 import PackageCards from '../components/Packages/PackageCards';
 import ContactSection from '../components/Contact/ContactSection';
 import Footer from '../components/Footer/Footer';
+import AdventurePlanningModal from '../components/AdventurePlanningModal/AdventurePlanningModal';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function Home() {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Smooth scroll to packages section for "Start Your Safari"
   const scrollToPackages = () => {
@@ -149,7 +152,7 @@ function Home() {
           <div className='services-ready'>
             <h3>Ready to Experience Authentic Africa?</h3>
             <p>Let our local experts craft a personalized journey that connects you with the heart and soul of Kenya's wilderness and culture.</p>
-            <button className='cta-button'>
+            <button className='cta-button' onClick={() => setIsModalOpen(true)}>
               Start Planning Your Adventure
             </button>
           </div>
@@ -161,7 +164,7 @@ function Home() {
           <div className="container">
           <PackageCards />
           </div>
-          <button className='explore-packages-btn'>View all Safari Packages</button>
+          <button className='explore-packages-btn' onClick={() => navigate('/tours')}>View all Safari Packages</button>
         </section>
 
         <section className='contact'>
@@ -171,6 +174,11 @@ function Home() {
           <Footer/>
         </section>
       </main>
+      
+      <AdventurePlanningModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </>
   );
 }

@@ -61,7 +61,7 @@ function ContactSection() {
               <div className="info-groups">
                 <div className="info-group">
                   <div className="info-header">
-                    <Phone size={24} className="info-icon" />
+                    <Phone className="info-icon" size={24} />
                     <h4>Phone</h4>
                   </div>
                   <div className="info-details">
@@ -72,7 +72,7 @@ function ContactSection() {
                 
                 <div className="info-group">
                   <div className="info-header">
-                    <Mail size={24} className="info-icon" />
+                    <Mail className="info-icon" size={24} />
                     <h4>Email</h4>
                   </div>
                   <div className="info-details">
@@ -83,7 +83,7 @@ function ContactSection() {
                 
                 <div className="info-group">
                   <div className="info-header">
-                    <MapPin size={24} className="info-icon" />
+                    <MapPin className="info-icon" size={24} />
                     <h4>Address</h4>
                   </div>
                   <div className="info-details">
@@ -94,7 +94,7 @@ function ContactSection() {
                 
                 <div className="info-group">
                   <div className="info-header">
-                    <Clock size={24} className="info-icon" />
+                    <Clock className="info-icon" size={24} />
                     <h4>Operating Hours</h4>
                   </div>
                   <div className="info-details">
@@ -106,14 +106,14 @@ function ContactSection() {
             </div>
 
             <div className="info-note">
-              <h4><span className="heading-icon">🏆</span> Why Choose Safari Logistics?</h4>
+              <h4>Why Choose Safari Logistics?</h4>
               <ul className="info-list">
-                <li><span className="list-icon">✓</span> 10+ years of experience in African tourism</li>
-                <li><span className="list-icon">✓</span> Licensed and insured operations</li>
-                <li><span className="list-icon">✓</span> Professional multilingual guides</li>
-                <li><span className="list-icon">✓</span> Modern, well-maintained vehicle fleet</li>
-                <li><span className="list-icon">✓</span> 24/7 customer support</li>
-                <li><span className="list-icon">✓</span> Competitive pricing with no hidden fees</li>
+                <li>• 10+ years of experience in African tourism</li>
+                <li>• Licensed and insured operations</li>
+                <li>• Professional multilingual guides</li>
+                <li>• Modern, well-maintained vehicle fleet</li>
+                <li>• 24/7 customer support</li>
+                <li>• Competitive pricing with no hidden fees</li>
               </ul>
             </div>
           </div>
