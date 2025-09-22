@@ -80,7 +80,7 @@ export const seasonalPackages = [
     period: 'January - March',
     title: 'Calving Season Adventure',
     description: 'Experience the miracle of birth as thousands of wildebeest calves are born in the southern Serengeti.',
-    image: 'https://images.unsplash.com/photo-1551058622-9560ed29c612?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     duration: '6 days',
     price: '$2,200',
     highlights: [

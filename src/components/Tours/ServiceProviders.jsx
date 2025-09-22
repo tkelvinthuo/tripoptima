@@ -199,7 +199,7 @@ const FilterPanel = ({ filters, onFilterChange }) => {
               onChange={(e) => onFilterChange('categories', category.category, e.target.checked)}
             />
             <span className="filter-label">
-              {category.icon} {category.category} ({category.count})
+              {category.category} ({category.count})
             </span>
           </label>
         ))}

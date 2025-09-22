@@ -239,31 +239,88 @@ function Tours() {
           </div>
         </section>
         
-        {/* Navigation Tabs */}
-        <section className='tours-navigation'>
-          <div className='navigation-container'>
-            <div className='tab-buttons'>
-              <button 
-                className={`tab-btn ${activeTab === 'destinations' ? 'active' : ''}`}
+        {/* Safari Experience Navigator */}
+        <section className='safari-navigator'>
+          <div className='navigator-container'>
+            <div className='navigator-header'>
+              <h2 className='navigator-title'>Plan Your Perfect Safari Experience</h2>
+              <p className='navigator-description'>
+                Choose your path to adventure - explore destinations, find the perfect season, or connect with expert guides
+              </p>
+            </div>
+            
+            <div className='experience-cards'>
+              <div 
+                className={`experience-card ${activeTab === 'destinations' ? 'active' : ''}`}
                 onClick={() => setActiveTab('destinations')}
               >
-                <MapPin size={18} />
-                Destinations
-              </button>
-              <button 
-                className={`tab-btn ${activeTab === 'seasonal' ? 'active' : ''}`}
+                <div className='card-icon'>
+                  <MapPin size={32} />
+                </div>
+                <div className='card-content'>
+                  <h3 className='card-title'>Safari Destinations</h3>
+                  <p className='card-description'>
+                    Discover Kenya's premier national parks and reserves, from the famous Maasai Mara to hidden gems
+                  </p>
+                  <div className='card-stats'>
+                    <span className='stat'>15+ Parks</span>
+                    <span className='stat'>Big Five</span>
+                    <span className='stat'>Year-round</span>
+                  </div>
+                </div>
+                <div className='card-arrow'>→</div>
+              </div>
+              
+              <div 
+                className={`experience-card ${activeTab === 'seasonal' ? 'active' : ''}`}
                 onClick={() => setActiveTab('seasonal')}
               >
-                <Calendar size={18} />
-                Seasonal Packages
-              </button>
-              <button 
-                className={`tab-btn ${activeTab === 'providers' ? 'active' : ''}`}
+                <div className='card-icon'>
+                  <Calendar size={32} />
+                </div>
+                <div className='card-content'>
+                  <h3 className='card-title'>Seasonal Packages</h3>
+                  <p className='card-description'>
+                    Time your adventure perfectly with packages designed for migration, calving season, and optimal weather
+                  </p>
+                  <div className='card-stats'>
+                    <span className='stat'>4 Seasons</span>
+                    <span className='stat'>Migration</span>
+                    <span className='stat'>Best Timing</span>
+                  </div>
+                </div>
+                <div className='card-arrow'>→</div>
+              </div>
+              
+              <div 
+                className={`experience-card ${activeTab === 'providers' ? 'active' : ''}`}
                 onClick={() => setActiveTab('providers')}
               >
-                <Users size={18} />
-                Service Providers
-              </button>
+                <div className='card-icon'>
+                  <Users size={32} />
+                </div>
+                <div className='card-content'>
+                  <h3 className='card-title'>Expert Providers</h3>
+                  <p className='card-description'>
+                    Connect with verified safari operators, land cruiser specialists, and professional guides
+                  </p>
+                  <div className='card-stats'>
+                    <span className='stat'>50+ Experts</span>
+                    <span className='stat'>Land Cruisers</span>
+                    <span className='stat'>5★ Rated</span>
+                  </div>
+                </div>
+                <div className='card-arrow'>→</div>
+              </div>
+            </div>
+            
+            <div className='navigator-breadcrumb'>
+              <span className='breadcrumb-label'>Currently viewing:</span>
+              <span className='breadcrumb-active'>
+                {activeTab === 'destinations' && '🗺️ Safari Destinations'}
+                {activeTab === 'seasonal' && '📅 Seasonal Packages'}
+                {activeTab === 'providers' && '👥 Expert Providers'}
+              </span>
             </div>
           </div>
         </section>
@@ -273,7 +330,8 @@ function Tours() {
           {renderTabContent()}
         </div>
         
-        {/* Testimonials Section */}
+        {/* Testimonials to be redesigned later */}
+        {/* 
         <section className='testimonials-section'>
           <div className='testimonials-container'>
             <div className='testimonials-header'>
@@ -284,7 +342,6 @@ function Tours() {
             </div>
 
             <div className='testimonials-grid'>
-              {/* Testimonial 1 */}
               <div className='testimonial-card'>
                 <div className='testimonial-header'>
                   <div className='testimonial-avatar'>
@@ -308,7 +365,6 @@ function Tours() {
                 </div>
               </div>
 
-              {/* Testimonial 2 */}
               <div className='testimonial-card'>
                 <div className='testimonial-header'>
                   <div className='testimonial-avatar'>
@@ -332,7 +388,6 @@ function Tours() {
                 </div>
               </div>
 
-              {/* Testimonial 3 */}
               <div className='testimonial-card'>
                 <div className='testimonial-header'>
                   <div className='testimonial-avatar'>
@@ -358,6 +413,7 @@ function Tours() {
             </div>
           </div>
         </section>
+        */}
         
         {/* CTA Section */}
         <section className='cta-section'>
