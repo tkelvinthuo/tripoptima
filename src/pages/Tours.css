@@ -654,3 +654,1162 @@
     min-width: 180px;
   }
 }
+
+/* Tab Navigation System */
+.tours-navigation {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0;
+}
+
+.navigation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: #059669;
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.tab-btn.active {
+  color: #059669;
+  border-bottom-color: #059669;
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.tab-content {
+  min-height: 60vh;
+}
+
+/* Responsive Design for Tabs */
+@media (max-width: 768px) {
+  .tab-buttons {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .tab-buttons::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tab-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+    min-width: fit-content;
+  }
+}
+
+@media (max-width: 640px) {
+  .tab-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Service Providers Section */
+.service-providers-section {
+  padding: 3rem 0;
+  background: #f9fafb;
+}
+
+.service-providers-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.providers-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+}
+
+/* Filter Sidebar */
+.filters-sidebar {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.search-box {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.filter-option input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #059669;
+}
+
+.filter-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.inline-star {
+  color: #f59e0b;
+  fill: currentColor;
+}
+
+/* Service Provider Cards Grid */
+.providers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.service-provider-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.service-provider-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.provider-header {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.provider-image-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.provider-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.provider-type-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(to right, #059669, #d97706);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.provider-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.provider-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.provider-specialization {
+  font-size: 0.875rem;
+  color: #059669;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.provider-location {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.location-icon {
+  color: #9ca3af;
+}
+
+.provider-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.rating-star {
+  color: #d1d5db;
+}
+
+.rating-star.filled {
+  color: #f59e0b;
+  fill: currentColor;
+}
+
+.rating-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Provider Content */
+.provider-content {
+  padding: 1.5rem;
+}
+
+.provider-description {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.provider-expertise {
+  margin-bottom: 1rem;
+}
+
+.expertise-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.expertise-tag {
+  background: rgba(34, 197, 94, 0.1);
+  color: #059669;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.provider-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.pricing-category {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.pricing-amount {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.provider-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.details-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  background: white;
+  color: #374151;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+  border-color: #059669;
+  color: #059669;
+}
+
+.contact-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(to right, #059669, #d97706);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(to right, #047857, #b45309);
+  transform: translateY(-1px);
+}
+
+/* Provider Details Expanded */
+.provider-details {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.details-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.detail-section {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.detail-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-item {
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.certification-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.certification-tag {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.vehicle-info, .guide-info {
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  background: white;
+}
+
+.vehicle-model, .guide-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.vehicle-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.vehicle-capacity, .vehicle-rate {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.vehicle-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.feature-tag, .specialty-tag {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.guide-experience {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.guide-languages {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.guide-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-rate {
+  font-weight: 600;
+  color: #059669;
+  font-size: 0.875rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+/* Responsive Design for Service Providers */
+@media (max-width: 1024px) {
+  .providers-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .filters-sidebar {
+    position: static;
+    order: -1;
+  }
+  
+  .filter-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .provider-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .provider-image-container {
+    align-self: center;
+  }
+  
+  .provider-actions {
+    flex-direction: column;
+  }
+  
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vehicle-details {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-providers-section {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .provider-header {
+    padding: 1rem;
+  }
+  
+  .provider-content {
+    padding: 1rem;
+  }
+}
+
+/* Seasonal Packages Section */
+.seasonal-packages-section {
+  padding: 3rem 0;
+  background: white;
+}
+
+.seasonal-packages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Season Filter Tabs */
+.season-filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background: rgba(34, 197, 94, 0.05);
+  border-radius: 1rem;
+}
+
+.season-tab {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  background: white;
+  color: #6b7280;
+  border-radius: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.season-tab:hover {
+  border-color: #059669;
+  color: #059669;
+}
+
+.season-tab.active {
+  background: linear-gradient(to right, #059669, #d97706);
+  color: white;
+  border-color: transparent;
+}
+
+/* Seasonal Highlights */
+.seasonal-highlights {
+  margin-bottom: 3rem;
+}
+
+.highlights-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title-icon {
+  color: #059669;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.seasonal-highlight-card {
+  background: white;
+  border: 2px solid #f3f4f6;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.seasonal-highlight-card:hover {
+  border-color: #059669;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.highlight-season {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-months {
+  color: #059669;
+  font-weight: 600;
+}
+
+.highlight-weather {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.weather-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-icon {
+  color: #6b7280;
+}
+
+.weather-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  display: block;
+}
+
+.weather-value {
+  font-size: 0.875rem;
+  color: #1f2937;
+  font-weight: 600;
+  display: block;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.wildlife-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.advantage-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.advantage-icon {
+  color: #f59e0b;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.activities-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.activity-tag {
+  background: rgba(34, 197, 94, 0.1);
+  color: #059669;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Seasonal Package Cards */
+.packages-section {
+  margin-bottom: 3rem;
+}
+
+.packages-section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.seasonal-package-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.seasonal-package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.package-image-container {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+}
+
+.package-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.seasonal-package-card:hover .package-image {
+  transform: scale(1.05);
+}
+
+.package-season-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: linear-gradient(to right, #059669, #d97706);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.package-period-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.package-content {
+  padding: 2rem;
+}
+
+.package-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.package-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.package-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.package-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.meta-item.price {
+  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.price-amount {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #059669;
+}
+
+.meta-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.package-highlights, .package-destinations, .package-best-for {
+  margin-bottom: 1rem;
+}
+
+.highlights-title, .destinations-title, .best-for-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.highlight-icon {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.destinations-tags, .best-for-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.destination-tag {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.best-for-tag {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.package-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.package-btn {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.package-btn.primary {
+  background: linear-gradient(to right, #059669, #d97706);
+  color: white;
+  border: none;
+}
+
+.package-btn.primary:hover {
+  background: linear-gradient(to right, #047857, #b45309);
+  transform: translateY(-2px);
+}
+
+.package-btn.secondary {
+  background: white;
+  color: #059669;
+  border: 2px solid #059669;
+}
+
+.package-btn.secondary:hover {
+  background: #059669;
+  color: white;
+}
+
+/* Planning Helper */
+.planning-helper {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid #d1fae5;
+}
+
+.planning-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.planning-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.planning-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.planning-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.planning-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.planning-btn.primary {
+  background: linear-gradient(to right, #059669, #d97706);
+  color: white;
+  border: none;
+}
+
+.planning-btn.primary:hover {
+  background: linear-gradient(to right, #047857, #b45309);
+  transform: translateY(-2px);
+}
+
+.planning-btn.secondary {
+  background: white;
+  color: #059669;
+  border: 2px solid #059669;
+}
+
+.planning-btn.secondary:hover {
+  background: #059669;
+  color: white;
+}
+
+/* Responsive Design for Seasonal Packages */
+@media (max-width: 768px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .highlights-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .package-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .meta-item.price {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+  
+  .package-actions {
+    flex-direction: column;
+  }
+  
+  .planning-actions {
+    flex-direction: column;
+  }
+  
+  .season-filter-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 640px) {
+  .seasonal-packages-section {
+    padding: 2rem 0;
+  }
+  
+  .highlights-section-title {
+    font-size: 1.75rem;
+  }
+  
+  .packages-section-title {
+    font-size: 1.75rem;
+  }
+  
+  .package-content {
+    padding: 1.5rem;
+  }
+  
+  .package-title {
+    font-size: 1.25rem;
+  }
+  
+  .season-tab {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}

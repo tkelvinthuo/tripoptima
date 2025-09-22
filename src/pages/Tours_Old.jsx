@@ -210,12 +210,13 @@ function Tours() {
           <div className='introduction-container'>
             <div className='introduction-content'>
               <h2 className='introduction-title'>
-                Discover Kenya's Safari Experiences
+                Discover Kenya's Premier National Parks
               </h2>
               <p className='introduction-description'>
-                Kenya offers diverse safari experiences tailored to every season and preference. From world-class 
-                destinations and seasonal wildlife spectacles to expert service providers, we connect you with 
-                authentic African adventures that create memories to last a lifetime.
+                Kenya is home to some of Africa's most spectacular wildlife destinations. Our expertly crafted 
+                safari packages take you deep into these pristine ecosystems, where every game drive reveals 
+                new wonders. From the thundering hooves of the Great Migration to intimate encounters with 
+                gentle giants, each safari is a journey into the heart of wild Africa.
               </p>
               <div className='stats-grid'>
                 <div className='stat-item'>
@@ -273,7 +274,7 @@ function Tours() {
           {renderTabContent()}
         </div>
         
-        {/* Testimonials Section */}
+        {/* Testimonials Section - Keep this outside tabs */}
         <section className='testimonials-section'>
           <div className='testimonials-container'>
             <div className='testimonials-header'>
@@ -283,6 +284,117 @@ function Tours() {
               </p>
             </div>
 
+            <div className='testimonials-grid'>
+                <div className='park-image-container'>
+                  <img 
+                    src='https://images.unsplash.com/photo-1581852017103-68ac65514cf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80' 
+                    alt='Maasai Mara National Reserve'
+                    className='park-image' 
+                  />
+                  <div className='park-badge'>Best: July - October</div>
+                </div>
+                <div className='park-content'>
+                  <h3 className='park-name'>Maasai Mara National Reserve</h3>
+                  <p className='park-description-text'>
+                    Home to the Great Migration and the Big Five, offering spectacular game viewing year-round.
+                  </p>
+                  <div className='park-highlights'>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Great Migration
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Big Five
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Hot air balloons
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Maasai culture
+                    </div>
+                  </div>
+                  <button className='explore-btn'>Explore Maasai Mara</button>
+                </div>
+              </div>
+              
+              {/* Amboseli */}
+              <div className='park-card'>
+                <div className='park-image-container'>
+                  <img 
+                    src='https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80' 
+                    alt='Amboseli National Park'
+                    className='park-image' 
+                  />
+                  <div className='park-badge'>Best: June - October</div>
+                </div>
+                <div className='park-content'>
+                  <h3 className='park-name'>Amboseli National Park</h3>
+                  <p className='park-description-text'>
+                    Famous for large elephant herds and stunning views of Mount Kilimanjaro.
+                  </p>
+                  <div className='park-highlights'>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Elephant herds
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Mount Kilimanjaro views
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Swamplands
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Maasai villages
+                    </div>
+                  </div>
+                  <button className='explore-btn'>Explore Amboseli</button>
+                </div>
+              </div>
+              
+              {/* Tsavo */}
+              <div className='park-card'>
+                <div className='park-image-container'>
+                  <img 
+                    src='https://images.unsplash.com/photo-1534177616072-ef7dc120449d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80' 
+                    alt='Tsavo East & West'
+                    className='park-image' 
+                  />
+                  <div className='park-badge'>Best: June - September</div>
+                </div>
+                <div className='park-content'>
+                  <h3 className='park-name'>Tsavo East & West</h3>
+                  <p className='park-description-text'>
+                    Kenya's largest protected area, known for red elephants and diverse landscapes.
+                  </p>
+                  <div className='park-highlights'>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Red elephants
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Mzima Springs
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Rock climbing
+                    </div>
+                    <div className='highlight-item'>
+                      <Camera size={14} className='highlight-icon' />
+                      Bird watching
+                    </div>
+                  </div>
+                  <button className='explore-btn'>Explore Tsavo</button>
+                </div>
+              </div>
+              
+              {/* Samburu */}
             <div className='testimonials-grid'>
               {/* Testimonial 1 */}
               <div className='testimonial-card'>
@@ -327,7 +439,7 @@ function Tours() {
                 <div className='testimonial-content'>
                   <Quote className='testimonial-quote' size={20}/>
                   <p className='testimonial-comment'>
-                    "Three weeks exploring Kenya's parks with TripOptima was the trip of a lifetime. Professional guides, comfortable accommodations, and unforgettable wildlife encounters."
+                    "Three weeks exploring Kenya's parks with Safari Logistics was the trip of a lifetime. Professional guides, comfortable accommodations, and unforgettable wildlife encounters."
                   </p>
                 </div>
               </div>
